@@ -3,6 +3,7 @@
 namespace Laravel\Tinker\Console;
 
 use Illuminate\Console\Command;
+use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Support\Env;
 use Laravel\Tinker\ClassAliasAutoloader;
 use Psy\Configuration;
@@ -13,6 +14,8 @@ use Symfony\Component\Console\Input\InputOption;
 
 class TinkerCommand extends Command
 {
+    use ConfirmableTrait;
+
     /**
      * Artisan commands to include in the tinker shell.
      *
