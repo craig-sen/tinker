@@ -68,7 +68,10 @@ class TinkerCommand extends Command
         $path .= '/composer/autoload_classmap.php';
 
         $config = $this->getLaravel()->make('config');
-        if (!$this->confirmToProceed()) {
+
+        $checkProd =  $config->get('tinker.confirm_in_production', false);
+
+        if ($checkProd && ! $this->confirmToProceed()) {
             return self::FAILURE;
         }
 
