@@ -47,4 +47,14 @@ return [
         'App\Nova',
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Confirm Before Entering Production 
+    |--------------------------------------------------------------------------
+    |
+    | Display a confirmation prompt before entering production.
+    |
+    */
+
+    'confirm_in_production' => false,
 ];
